@@ -1,0 +1,197 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "toc_visible": true,
+      "authorship_tag": "ABX9TyMFcjJERfNKm+fhnLz3uAlh",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Aaikyu/Math/blob/main/MathWorkshop1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Saju Manandhar 2603732"
+      ],
+      "metadata": {
+        "id": "Ku3R6pfH-_Dn"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "a. Write a function fib (n) that prompts the number of terms “n” from the user and displays first “n” terms of Fibonacci sequence iteratively."
+      ],
+      "metadata": {
+        "id": "FejO29GqWa-P"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def fib(n):\n",
+        "  a=1\n",
+        "  b=1\n",
+        "  print(0)\n",
+        "  for i in range(n-1):\n",
+        "    if(a<=1):\n",
+        "      print(a)\n",
+        "    else:\n",
+        "      print(b)\n",
+        "    c=a\n",
+        "    a+=b\n",
+        "    b=c\n",
+        "\n",
+        "n=int(input(\"Enter the number of terms to display: \"))\n",
+        "fib(n)\n"
+      ],
+      "metadata": {
+        "id": "Bu0vFgOL--s3",
+        "collapsed": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "b. Write a function myPow(x, n) that returns x^n, where and n is a non-negative integer. Do not use the ** operator or the math.pow function - use one while loop."
+      ],
+      "metadata": {
+        "id": "DKBkdsvyaVTV"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def myPow(x,n):\n",
+        "  y=1\n",
+        "  if n==0:\n",
+        "    return 1\n",
+        "  for i in range(n):\n",
+        "    y=y*x\n",
+        "  return y\n",
+        "\n",
+        "x=int(input(\"Enter a non-negative number (base): \"))\n",
+        "n=int(input(\"Enter a non-negative number (power): \"))\n",
+        "print(f\"{x} powered {n} = {myPow(x,n)}\")\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "n_5uBk5fWMAh"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "c. Write a function SumDigits(n) that displays the sum of digits of “n”."
+      ],
+      "metadata": {
+        "id": "BFkvJFiCbq16"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def SumDigits(n):\n",
+        "  a=n\n",
+        "  b,c=0,0\n",
+        "  while(a!=0):\n",
+        "    b=a%10\n",
+        "    c+=b\n",
+        "    a=a//10\n",
+        "  print(f\"Sum of digits in {n} = {c}\")\n",
+        "n=int(input(\"Enter a positive number: \"))\n",
+        "SumDigits(n)"
+      ],
+      "metadata": {
+        "id": "LVbmphSTbqfj"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "d. Write a function squaredSum that returns the sum of the squares of an array/list of\n",
+        "integers such that squaredSum([2,3,4]) gives 29. Write your solution in pure Python\n",
+        "to show the logic in your solution, do not use any library functions."
+      ],
+      "metadata": {
+        "id": "UPDcGT2BbsrP"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def squaredSum(a):\n",
+        "  Sum=0\n",
+        "  for i in a:\n",
+        "    i=int(i)\n",
+        "    Sum=Sum+(i*i)\n",
+        "  return Sum\n",
+        "n = int(input(\"Enter number of numbers to enter: \"))\n",
+        "list=[]\n",
+        "for i in range(n):\n",
+        "  a=int(input(f\"Enter number{i+1} = \"))\n",
+        "  list.append(a)\n",
+        "print(\"Sum of the numbers provided = \",squaredSum(list))"
+      ],
+      "metadata": {
+        "id": "VRJuTKlmbsHL"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "e. Write a function called sumDigits that is given an integer num and returns the sum of\n",
+        "the digits of num. Eg. sumDigits(6) gives 21. Do not use any library functions (if\n",
+        "there is one)"
+      ],
+      "metadata": {
+        "id": "jcGKZLfLfUU9"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def SumDigits(num):\n",
+        "  j=0\n",
+        "  for i in range(num+1):\n",
+        "    j+=i\n",
+        "  return j\n",
+        "num = int(input(\"Enter a number: \"))\n",
+        "print(f\"Sum of digits in {num} = {SumDigits(num)}\")"
+      ],
+      "metadata": {
+        "id": "LDFYus3Bfai4"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
