@@ -1,0 +1,848 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMO5H6VmadVpQ2t5gVzyUeV",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Aaikyu/Math/blob/main/MathWorkshop1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Saju Manandhar 2603732"
+      ],
+      "metadata": {
+        "id": "Ku3R6pfH-_Dn"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Example 1:"
+      ],
+      "metadata": {
+        "id": "VPDXX6IHm3dV"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "length = 10 #variable1\n",
+        "width = 5 #variable2\n",
+        "area = length * width #This is called an expression\n",
+        "print(area)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VBFROczHm5cH",
+        "outputId": "df6b030d-2450-4c65-9685-f84ad07cd1ee"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "50\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Example 2:"
+      ],
+      "metadata": {
+        "id": "_TGupB9RnJjj"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(7+8.5) # 7 is int type & 8.5 is float type, but mixing these two programs run well"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZfMC87Bfm7Vf",
+        "outputId": "76ff08fc-609c-4b88-f079-d26b333299df"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "15.5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Example 3:"
+      ],
+      "metadata": {
+        "id": "HuK8OEDQnJ8E"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "base = 6\n",
+        "height = 2\n",
+        "area = base*height/2\n",
+        "print(\"Area is \" + str(area)) #changed, int type, 'area' to string"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PnfK9qWinHs0",
+        "outputId": "eac47584-6fca-43a1-ec9c-bf4fd6eee546"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Area is 6.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Example 4:"
+      ],
+      "metadata": {
+        "id": "Xc23kHmXnuG0"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def greeting (name): #passing parameters/argumets to the function\n",
+        "  print(\"Welcome \"+ name)\n",
+        "greeting(\"Saju\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "beikn4wAnvX5",
+        "outputId": "fbdac0bd-e163-409b-aa62-0e7cb6e6e042"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Welcome Saju\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Example 5:"
+      ],
+      "metadata": {
+        "id": "qTlVhCiVoVkn"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# getting values out of the function(return values)\n",
+        "def area_traingle(b, h):\n",
+        "  return b*h/2\n",
+        "area = area_traingle(4, 8)\n",
+        "print(\"area of traingle is: \" + str(area))"
+      ],
+      "metadata": {
+        "id": "NCnHTQHNoYwl"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Example 6:"
+      ],
+      "metadata": {
+        "id": "dd4nZX2Bog4y"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def order_numbers(number1, number2):\n",
+        "  if number2 > number1:\n",
+        "    return number1,number2\n",
+        "  else:\n",
+        "    return number2, number1\n",
+        "# 1) Fill in the blanks so the print statement displays the result of the function call\n",
+        "smaller, bigger = order_numbers(100, 99)\n",
+        "print(smaller, bigger)"
+      ],
+      "metadata": {
+        "id": "vA8dPAjuoigA"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Example 7:"
+      ],
+      "metadata": {
+        "id": "Xi3vkvoho1C8"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Even or Odd\n",
+        "def is_Even(number):\n",
+        "  if (number%2 == 0):\n",
+        "    return True\n",
+        "  return False\n",
+        "is_Even(7)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "y6aQH_Lio2UX",
+        "outputId": "2d4394fd-d619-4496-d1cb-f61e8b2a6dc1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "False"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 38
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Example 8:"
+      ],
+      "metadata": {
+        "id": "yfNOu7DGpLn-"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def number_group(number):\n",
+        "  if number > 0:\n",
+        "    return \"Positive\"\n",
+        "  elif number == 0:\n",
+        "    return \"Zero\"\n",
+        "  else:\n",
+        "    return \"Negative\"\n",
+        "print(number_group(10)) #Should be Positive\n",
+        "print(number_group(0)) #Should be Zero\n",
+        "print(number_group(-5)) #Should be Negative"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QT3HZfespNOj",
+        "outputId": "f27136ac-d270-4779-a987-58ff924f47d8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Positive\n",
+            "Zero\n",
+            "Negative\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Example 9:"
+      ],
+      "metadata": {
+        "id": "N_0H2W7ApTQI"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#while loop\n",
+        "x = 0 # initialzation of variable Why=?\n",
+        "while x<5:\n",
+        "  print(\"Not there yet, x= \" + str(x))\n",
+        "  x = x+1\n",
+        "print(\"x= \"+str(x)) #output=??"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gnfZNVXBpUoE",
+        "outputId": "7d34641c-3228-456b-b70d-a96f1b7f679f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Not there yet, x= 0\n",
+            "Not there yet, x= 1\n",
+            "Not there yet, x= 2\n",
+            "Not there yet, x= 3\n",
+            "Not there yet, x= 4\n",
+            "x= 5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Example 10:"
+      ],
+      "metadata": {
+        "id": "ipiptRg0pxkb"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def count_down(start_number):\n",
+        "  current=start_number #initialzation of variable\n",
+        "  while (current > 0):\n",
+        "    print(current)\n",
+        "    current -= 1\n",
+        "  print(\"Zero!\")\n",
+        "count_down(10)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Owp2JUc3pymv",
+        "outputId": "b514a0ef-2d59-450d-c740-fb3bff143e5f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10\n",
+            "9\n",
+            "8\n",
+            "7\n",
+            "6\n",
+            "5\n",
+            "4\n",
+            "3\n",
+            "2\n",
+            "1\n",
+            "Zero!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Example 11:"
+      ],
+      "metadata": {
+        "id": "Dg_VW0lZqFIp"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Infinite loops and how to break them?\n",
+        "while x%2 == 0:\n",
+        "  x = x/2\n",
+        "#what happens here when x = 0 (infinite loop)\n",
+        "#can you solve this?\n",
+        "#We can solve it by adding an extra condition in the while statement:\n",
+        "# while x%2 ==0 and x!=0:\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "HK4XvqLlqGqt"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Example 12:"
+      ],
+      "metadata": {
+        "id": "5cg5WUQTrbod"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Solution of Example 11\n",
+        "if x != 0:\n",
+        "  while x%2 == 0:\n",
+        "    x = x/2\n",
+        "#or\n",
+        "while x != 0 and x%2 == 0:\n",
+        "  x = x/2"
+      ],
+      "metadata": {
+        "id": "qSyippuHrc1Y"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Example 13:"
+      ],
+      "metadata": {
+        "id": "o7VoTSQbro1V"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# for loop, iterates over a sequence of values\n",
+        "for x in range(5):\n",
+        "  print(x) #Output=0-4"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZGCWT93erruv",
+        "outputId": "421839b4-b001-4cc4-a353-c7d0f6d6c2dd"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Example 14:"
+      ],
+      "metadata": {
+        "id": "zyfy98xqr5HO"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def square(n):\n",
+        "  return n*n\n",
+        "def sum_squares(x):\n",
+        "  sum = 0\n",
+        "  for n in range(10):\n",
+        "    sum += square(n)\n",
+        "  return sum\n",
+        "print(sum_squares(10)) #Output=??\n",
+        "#Explain what the program does?"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "op22nKxur6HX",
+        "outputId": "e28bf66c-ba15-40b4-b346-9fb619ca7d29"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "285\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The program in example 14 squares all the numbers upto the given number and prints their sum."
+      ],
+      "metadata": {
+        "id": "6DaA9XhtsO2Q"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Example 15:"
+      ],
+      "metadata": {
+        "id": "zd8-vTa4sbDX"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "values = [10, 20, 30, 40, 50]\n",
+        "Sum = 0\n",
+        "length = 0\n",
+        "for value in values:\n",
+        "  Sum = Sum+value\n",
+        "  length = length+1\n",
+        "print(\"Total sum= \"+str(Sum)+\" and the Average= \"+str(Sum/length))\n",
+        "#Output=??\n",
+        "#Explain what the program does?"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "knZFhpevsclV",
+        "outputId": "1826765a-9d86-4aca-c455-a64f53898c99"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Total sum= 150 and the Average= 30.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The program in example 15 adds all the number in a list and returns sum and average of the numbers"
+      ],
+      "metadata": {
+        "id": "pqOqrejPsmJE"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Example 16:"
+      ],
+      "metadata": {
+        "id": "xKUt2I4xswJ3"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#nested for loops\n",
+        "for left in range(7):\n",
+        "  for right in range(left, 7):\n",
+        "    print(\"[\"+str(left)+\"|\"+str(right)+\"]\", end=\" \")\n",
+        "  print()\n",
+        "#Output=?? Explain what the program does?"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2gy4qnOvsxLr",
+        "outputId": "fbe88499-397a-4377-84b4-fd9641040ef6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[0|0] [0|1] [0|2] [0|3] [0|4] [0|5] [0|6] \n",
+            "[1|1] [1|2] [1|3] [1|4] [1|5] [1|6] \n",
+            "[2|2] [2|3] [2|4] [2|5] [2|6] \n",
+            "[3|3] [3|4] [3|5] [3|6] \n",
+            "[4|4] [4|5] [4|6] \n",
+            "[5|5] [5|6] \n",
+            "[6|6] \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The program in example 16 creates a right angled traingle table pattern with value of it's row and column displayed in each cell"
+      ],
+      "metadata": {
+        "id": "D1teZc-8tBy6"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "a. Write a function fib (n) that prompts the number of terms “n” from the user and displays first “n” terms of Fibonacci sequence iteratively."
+      ],
+      "metadata": {
+        "id": "FejO29GqWa-P"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def fib(n):\n",
+        "  a=1\n",
+        "  b=1\n",
+        "  print(0)\n",
+        "  for i in range(n-1):\n",
+        "    if(a<=1):\n",
+        "      print(a)\n",
+        "    else:\n",
+        "      print(b)\n",
+        "    c=a\n",
+        "    a+=b\n",
+        "    b=c\n",
+        "\n",
+        "n=int(input(\"Enter the number of terms to display: \"))\n",
+        "fib(n)\n"
+      ],
+      "metadata": {
+        "id": "Bu0vFgOL--s3",
+        "collapsed": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "b. Write a function myPow(x, n) that returns x^n, where and n is a non-negative integer. Do not use the ** operator or the math.pow function - use one while loop."
+      ],
+      "metadata": {
+        "id": "DKBkdsvyaVTV"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def myPow(x,n):\n",
+        "  y=1\n",
+        "  if n==0:\n",
+        "    return 1\n",
+        "  for i in range(n):\n",
+        "    y=y*x\n",
+        "  return y\n",
+        "\n",
+        "x=int(input(\"Enter a non-negative number (base): \"))\n",
+        "n=int(input(\"Enter a non-negative number (power): \"))\n",
+        "print(f\"{x} powered {n} = {myPow(x,n)}\")\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "n_5uBk5fWMAh"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "c. Write a function SumDigits(n) that displays the sum of digits of “n”."
+      ],
+      "metadata": {
+        "id": "BFkvJFiCbq16"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def SumDigits(n):\n",
+        "  a=n\n",
+        "  b,c=0,0\n",
+        "  while(a!=0):\n",
+        "    b=a%10\n",
+        "    c+=b\n",
+        "    a=a//10\n",
+        "  print(f\"Sum of digits in {n} = {c}\")\n",
+        "n=int(input(\"Enter a positive number: \"))\n",
+        "SumDigits(n)"
+      ],
+      "metadata": {
+        "id": "LVbmphSTbqfj"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "d. Write a function squaredSum that returns the sum of the squares of an array/list of\n",
+        "integers such that squaredSum([2,3,4]) gives 29. Write your solution in pure Python\n",
+        "to show the logic in your solution, do not use any library functions."
+      ],
+      "metadata": {
+        "id": "UPDcGT2BbsrP"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def squaredSum(a):\n",
+        "  Sum=0\n",
+        "  for i in a:\n",
+        "    i=int(i)\n",
+        "    Sum=Sum+(i*i)\n",
+        "  return Sum\n",
+        "n = int(input(\"Enter number of numbers to enter: \"))\n",
+        "list=[]\n",
+        "for i in range(n):\n",
+        "  a=int(input(f\"Enter number{i+1} = \"))\n",
+        "  list.append(a)\n",
+        "print(\"Sum of the numbers provided = \",squaredSum(list))"
+      ],
+      "metadata": {
+        "id": "VRJuTKlmbsHL"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "e. Write a function called sumDigits that is given an integer num and returns the sum of\n",
+        "the digits of num. Eg. sumDigits(6) gives 21. Do not use any library functions (if\n",
+        "there is one)"
+      ],
+      "metadata": {
+        "id": "jcGKZLfLfUU9"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def SumDigits(num):\n",
+        "  j=0\n",
+        "  for i in range(num+1):\n",
+        "    j+=i\n",
+        "  return j\n",
+        "num = int(input(\"Enter a number: \"))\n",
+        "print(f\"Sum of digits in {num} = {SumDigits(num)}\")"
+      ],
+      "metadata": {
+        "id": "LDFYus3Bfai4"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Extra Question:\n",
+        "Write a program to prompt the user for hours and rate per hour using input( ) to compute\n",
+        "gross pay. Pay the hourly rate for the hours up to 40 and 1.5 times the hourly rate for all\n",
+        "hours worked above 40 hours. Use 45 hours and a rate of 10.50 per hour to test the program\n",
+        "(the pay should be 498.75).\n"
+      ],
+      "metadata": {
+        "id": "KzYeuo-XuU6r"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "hrs = input(\"Enter Hours:\")\n",
+        "h = float(hrs)\n",
+        "rate = input(\"Enter the rate per hour:\")\n",
+        "r = float(rate)\n",
+        "overtime_pay=0\n",
+        "if(h<=40):\n",
+        "  overall_pay=h*r\n",
+        "if h>40:\n",
+        "  normal_pay=40*r\n",
+        "  overtime_pay=(h-40)*(r*1.5)\n",
+        "  overall_pay=normal_pay+overtime_pay\n",
+        "\n",
+        "print(\"The pay should be: \",overall_pay)\n",
+        "# complete the program"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MGygx5DxuW2x",
+        "outputId": "336310d2-96aa-4e94-919e-8ce8301935c6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter Hours:45\n",
+            "Enter the rate per hour:10.50\n",
+            "The pay should be:  498.75\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
